@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ксения Бондарчук](https://up.htmlacademy.ru/htmlcss/30/user/944533).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Сигов](https://htmlacademy.ru/profile/crazer).
 
 ---
 
