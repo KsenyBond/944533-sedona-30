@@ -141,7 +141,7 @@ button {
 
 .nav-link:active {
   color: var(--basic-black);
-  opacity: 0.3;
+  filter: opacity(0.3);
 }
 
 .nav-item-current .nav-link {
@@ -266,6 +266,102 @@ button {
   background-image: url("../img/calendar.svg");  /* как правильно менять цвет? */
   background-position: right center;
   background-repeat: no-repeat;
+}
+
+/* Filters */
+.filters {
+  background: var(--basic-blue) url("../img/bg.jpg") no-repeat;
+  color: var(--basic-white);
+}
+
+.filter-form .set-caption {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter-button {
+  background: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+/* Sort */
+
+.sort {
+  background-color: var(--basic-white);
+}
+
+.sort-types {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.sort-option {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  filter: opacity(0.3);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sort .sort-option-current {
+  color: var(--basic-blue);
+  filter: none;
+  border: 0;
+}
+
+.sort-option:hover {
+  color: var(--basic-blue);
+  filter: none;
+}
+
+.sort-option:active {
+  color: var(--basic-black);
+  filter: none;
+  border: 0;
+}
+
+.sort-option-order {
+  color: var(--decor-sort);
+}
+
+.sort-option-order:hover {
+  color: var(--basic-black);
+}
+
+.sort-option-order:active {
+  color: var(--basic-blue);
+}
+
+/* Catalog */
+
+.catalog {
+  background-color: var(--basic-white);
+  text-align: left;
+}
+
+.catalog-item-title,
+.sort-result {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.catalog-item-title:hover {
+  color: var(--basic-blue);
+}
+
+.catalog-item-title:active {
+  color: var(--basic-black);
+  filter: opacity(0.3);
+}
+
+.catalog-item-rating {
+  background-color: var(--minor-bg-gray);
+  color: var(--minor-text-gray);
+  text-align: center;
 }
 
 /* Main footer */
