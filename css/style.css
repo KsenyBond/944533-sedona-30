@@ -92,6 +92,10 @@ p {
   padding: 0;
 }
 
+fieldset {
+  border: none;
+}
+
 /* Global buttons */
 
 button {
@@ -377,8 +381,53 @@ button {
 
 /* Filters */
 .filters {
-  background: var(--basic-blue) url("../img/bg.jpg") no-repeat;
+  background: var(--basic-blue) url("../img/bg-catalog.jpg") no-repeat;
   color: var(--basic-white);
+}
+
+.filter-form {
+  display: grid;
+  margin: 0 73px;
+  grid-template-columns: 127px 400px 200px 327px;
+  grid-template-rows: min-content min-content;
+  padding: 26.5px 0 32px;       /* разобраться с высотой формы */
+}
+
+.infrastructure-options {
+  grid-row: 1 / -1;
+}
+
+.type-options {
+  grid-row: 1 / -1;
+  margin-left: 126px;
+}
+
+.infrastructure-options .filter-option,
+.type-options .filter-option {
+  margin-bottom: 25px;
+}
+
+.infrastructure-options .filter-option:last-child,
+.type-options .filter-option:last-child {
+  margin-bottom: 0;
+}
+
+.infrastructure-options .set-caption,
+.type-options .set-caption {
+  margin-bottom: 24px;
+}
+
+.price-options {
+  grid-column: 4 / 5;
+  justify-content: end;
+}
+
+.filter-button {
+  grid-column: 4 / 5;
+  grid-row: -2 / -1;
+  width: min-content;
+  height: min-content;
+  margin: 0 auto;
 }
 
 .filter-form .set-caption {
