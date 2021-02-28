@@ -44,6 +44,10 @@
 
 /* Global */
 
+.page {
+  height: 100%;
+}
+
 .page-body {
   width: 1200px;
   min-height: 100%;
@@ -56,7 +60,7 @@
   text-transform: uppercase;
   color: var(--basic-text-gray);
   background-color: var(--basic-white);
-  box-shadow: 0 0 60px var(--basic-bg-gray);
+  box-shadow: 0 0 60px var(--basic-bg-gray);   /* Временно */
 
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -140,12 +144,6 @@ button {
   fill-opacity: 0.3;
 }
 
-/* Grid */
-
-.page {
-  height: 100%;
-}
-
 /* Navigation */
 
 .nav {
@@ -220,11 +218,18 @@ button {
     var(--basic-blue) url("../img/bg.jpg") no-repeat;
   padding-top: 77.35px;
   box-sizing: border-box;
+  margin-bottom: 42.5px;
+}
+
+.intro-slogan {
+  width: 456.65px;
+  height: 350.88px;
+  margin: 0 auto;
 }
 
 .intro-info {
-  margin: 43.5px auto 16.5px;
-  height: 80px;
+  margin: 0 auto 16.5px;
+  min-height: 80px;
   vertical-align: top;
   font-size: 21px;
   line-height: 26px;
@@ -234,9 +239,93 @@ button {
 
 /* Advantages */
 
+/*.advantages {*/
+/*  background-color: var(--basic-white);*/
+/*  text-align: center;*/
+/*}*/
+
+/*.advantages-list-caption {*/
+/*  line-height: 26px;*/
+/*  margin-bottom: 51px;*/
+/*}*/
+
+/*.advantages-list {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(3, 1fr);*/
+/*  grid-template-rows: min-content min-content 256px;*/
+/*}*/
+
+/*.advantage-item {*/
+/*  background-color: var(--basic-bg-gray);*/
+/*}*/
+
+/*.real-city,*/
+/*.devils-bridge {*/
+/*  color: var(--basic-white);*/
+/*  background-color: var(--basic-blue);*/
+/*}*/
+
+/*.real-city .advantage-title,*/
+/*.devils-bridge .advantage-title {*/
+/*  color: var(--basic-white);*/
+/*}*/
+
+/*.real-city {*/
+/*  display: grid;*/
+/*  grid-template-columns: 1fr min-content;*/
+/*  grid-template-rows: min-content 330px;*/
+/*  grid-column: 1 / -1;*/
+/*}*/
+
+/*.devils-bridge {*/
+/*  display: grid;*/
+/*  grid-template-columns: min-content 1fr;*/
+/*  grid-column: 1 / -1;*/
+/*}*/
+
+/*.real-city .advantage-item-text {*/
+/*  grid-column: 1 / 2;*/
+/*  grid-row: 1 / 2;*/
+/*}*/
+
+/*.real-city::before {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  width: 800px;*/
+/*  height: 256px;*/
+/*  background-image: url("../img/city-view.jpg");*/
+/*  grid-column: 2 / 3;*/
+/*}*/
+
+/*.devils-bridge::before {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  width: 800px;*/
+/*  height: 256px;*/
+/*  background-image: url("../img/canyon.jpg");*/
+/*}*/
+
+/*.features-list {*/
+/*  background-color: var(--basic-white);*/
+/*  color: var(--basic-text-gray);*/
+/*  grid-row: 2 / 3;*/
+/*  grid-column: 1 / 3;*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(3, 1fr);*/
+/*  grid-template-rows: 330px;*/
+/*}*/
+
+/*.advantage-title,*/
+/*.feature-title {*/
+/*  font-size: 21px;*/
+/*  font-weight: 700;*/
+/*  color: var(--basic-black);*/
+/*}*/
+
 .advantages {
   background-color: var(--basic-white);
   text-align: center;
+  margin-bottom: 58px;
 }
 
 .advantages-list-caption {
@@ -245,17 +334,31 @@ button {
 }
 
 .advantages-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content min-content 256px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantage-item {
-  background-color: var(--basic-bg-gray);
+  flex-shrink: 0;
 }
 
-.real-city,
-.devils-bridge {
+.advantage-item-text {
+  background-color: var(--basic-bg-gray);
+  width: 400px;
+  min-height: 256px;
+  padding: 47px 0 54px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.advantage-description {
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+.real-city .advantage-item-text,
+.devils-bridge .advantage-item-text {
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
@@ -266,55 +369,93 @@ button {
 }
 
 .real-city {
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-template-rows: min-content 330px;
-  grid-column: 1 / -1;
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .devils-bridge {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-column: 1 / -1;
-}
-
-.real-city .advantage-item-text {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  width: inherit;
+  display: flex;
+  align-items: center;
 }
 
 .real-city::before {
   content: "";
-  display: block;
   width: 800px;
   height: 256px;
   background-image: url("../img/city-view.jpg");
-  grid-column: 2 / 3;
+  flex-shrink: 0;
+  order: 1;
 }
 
 .devils-bridge::before {
   content: "";
-  display: block;
   width: 800px;
   height: 256px;
   background-image: url("../img/canyon.jpg");
+  flex-shrink: 0;
 }
 
 .features-list {
   background-color: var(--basic-white);
   color: var(--basic-text-gray);
-  grid-row: 2 / 3;
-  grid-column: 1 / 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 330px;
+  display: flex;
+  flex-shrink: 0;
+  order: 2;
+}
+
+.feature-item {
+  width: 400px;
+  min-height: 330px;
+  padding-bottom: 82px;
+  box-sizing: border-box;
+}
+
+.feature-description {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.motel::before {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/motel.svg");
+  margin: 60px auto 28px auto;
+}
+
+.food::before {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/food.svg");
+  margin: 61px auto 28px auto;
+}
+
+.gifts::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/gifts.svg");
+  margin: 55px auto 28px auto;
 }
 
 .advantage-title,
 .feature-title {
   font-size: 21px;
   font-weight: 700;
+  max-width: 150px;
   color: var(--basic-black);
+  margin: 0 auto 25px auto;
+}
+
+.advantage-number {
+  margin-bottom: 23px;
 }
 
 /* Booking */
@@ -329,10 +470,13 @@ button {
   line-height: 24px;
   font-weight: 700;
   color: var(--basic-black);
+  margin-bottom: 4px;
 }
 
 .booking-info {
   line-height: 24px;
+  padding: 23px 0;
+  margin-bottom: 24px;
 }
 
 .booking .button-content {
@@ -380,6 +524,7 @@ button {
 }
 
 /* Filters */
+
 .filters {
   background: var(--basic-blue) url("../img/bg-catalog.jpg") no-repeat;
   color: var(--basic-white);
