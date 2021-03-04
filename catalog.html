@@ -29,7 +29,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="infrastructure-options">
+          <fieldset class="left-container infrastructure-options">
             <legend class="set-caption">Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
@@ -46,7 +46,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="type-options">
+          <fieldset class="left-container type-options">
             <legend class="set-caption">Тип жилья:</legend>
             <ul>
               <li class="filter-option">
@@ -63,19 +63,21 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="price-options">
-            <legend class="set-caption">Стоимость в сутки (Р):</legend>
-            <label for="filter-price"><span>от 0</span><span>до 3000</span></label>
-            <input class="filter-input-range" type="range" min="0" max="3000" step="10" name="price-per-day" id="filter-price">
-          </fieldset>
-          <button class="filter-button" type="submit">Показать</button>
+          <div class="right-container">
+            <fieldset class="price-options">
+              <legend class="set-caption">Стоимость в сутки (Р):</legend>
+              <label for="filter-price"><span>от 0</span><span>до 3000</span></label>
+              <input class="filter-input-range" type="range" min="0" max="3000" step="10" name="price-per-day" id="filter-price">
+            </fieldset>
+            <button class="filter-button" type="submit">Показать</button>
+          </div>
         </form>
       </section>
       <section class="sort">
         <h2 class="visually-hidden">Сортировка результатов поиска гостиниц</h2>
         <span class="sort-result">Найдено: 3</span>
         <span class="sort-types">Сортировка:</span>
-        <ul>
+        <ul class="sort-option-list">
           <li class="sort-option sort-option-current">
             <a href="#">По цене</a>
           </li>
@@ -85,10 +87,10 @@
           <li class="sort-option">
             <a href="#">По рейтингу</a>
           </li>
-          <li class="sort-option-order">
+          <li class="sort-option-order sort-option-order-up">
             <a href="#">По возрастанию</a>
           </li>
-          <li class="sort-option-order sort-option-current">
+          <li class="sort-option-order sort-option-order-down sort-option-current">
             <a href="#">По убыванию</a>
           </li>
         </ul>
