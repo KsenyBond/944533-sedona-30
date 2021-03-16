@@ -177,7 +177,7 @@ button {
 }
 
 .nav-item:nth-child(4n + 1) {
-  padding-left: 73px;
+  padding-left: 72px;
   justify-self: start;
 }
 
@@ -190,13 +190,14 @@ button {
 }
 
 .nav-item:nth-child(4n + 4) {
-  padding-right: 73px;
+  padding-right: 72px;
   justify-self: end;
 }
 
 .logo {
   position: absolute;
   left: 50%;
+  top: 0;
   transform: translate(-50%);
 }
 
@@ -236,8 +237,8 @@ button {
 }
 
 .intro-slogan {
-  width: 456.65px;
-  height: 350.88px;
+  width: 458px;
+  height: 352px;
   margin: 0 auto;
 }
 
@@ -278,13 +279,12 @@ button {
   background-color: var(--basic-bg-gray);
   width: 400px;
   min-height: 256px;
-  padding: 47px 0 54px;
+  padding: 47px 40px 54px 40px;
   box-sizing: border-box;
   flex-shrink: 0;
 }
 
 .advantage-description {
-  max-width: 310px;
   margin: 0 auto;
 }
 
@@ -314,25 +314,30 @@ button {
 
 .real-city::before {
   content: "";
+  display: block;
+  margin: auto;
   width: 800px;
   height: 256px;
-  background-image: url("../img/city-view.jpg");
+  background: var(--basic-blue) url("../img/city-view.jpg");
+  background-size: contain;
   flex-shrink: 0;
   order: 1;
 }
 
 .devils-bridge::before {
   content: "";
+  display: block;
+  margin: auto;
   width: 800px;
   height: 256px;
-  background-image: url("../img/canyon.jpg");
+  background: var(--basic-blue) url("../img/canyon.jpg");
+  background-size: contain;
   flex-shrink: 0;
 }
 
 .advantage-title {
   font-size: 21px;
   font-weight: 700;
-  max-width: 150px;
   color: var(--basic-black);
   margin: 0 auto 25px auto;
 }
@@ -404,7 +409,6 @@ button {
 /* Booking */
 
 .booking {
-  width: 568px;
   margin: 0 auto;
   background-color: var(--basic-white);
 }
@@ -431,9 +435,20 @@ button {
   font-weight: 700;
 }
 
+.booking_container {
+  min-height: 594px;
+  position: relative;
+}
+
 .booking-form {
+  width: 568px;
+  box-sizing: border-box;
   padding: 55px;
+  margin: 0 auto;
+  background-color: var(--basic-white);
   box-shadow: 0 7px 15px rgba(var(--basic-shadow-rgb), 0.15);
+  z-index: 20;
+  position: relative;
 
   display: flex;
   flex-wrap: wrap;
@@ -508,13 +523,14 @@ button {
 
 .button-search-form {
   display: block;
-  width: 100%;
+  width: 568px;
   height: 86px;
+  margin: 0 auto;
 }
 
 .button-search {
   display: block;
-  width: 100%;
+  width: 568px;
   height: 58px;
 }
 
@@ -548,12 +564,20 @@ button {
   fill: var(--basic-blue);
 }
 
+.map {
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 0;
+  border: 0;
+}
+
 /* Filters */
 
 .filters {
   background: var(--basic-blue) url("../img/bg-catalog.jpg") no-repeat;
   color: var(--basic-white);
-  height: 217px;
+  width: 1200px;
+  min-height: 217px;
   padding-top: 26.5px;
   box-sizing: border-box;
 }
@@ -724,7 +748,7 @@ button {
 }
 
 .range-controls .toggle-max {
-  left: 80%
+  left: 80%;
 }
 
 .button-filter {
@@ -860,6 +884,8 @@ button {
 .catalog-item-image {
   width: 135px;
   height: 90px;
+  object-fit: contain;
+  background-color: var(--basic-white);
 }
 
 .catalog-item-title {
@@ -960,19 +986,25 @@ button {
   line-height: 26px;
 }
 
+.main-page-footer {
+  margin-top: -120px;
+  position: relative;
+  z-index: 3;
+}
+
 .main-footer .container {
   min-height: 120px;
 
   display: grid;
   grid-template-columns: 327px 400px 327px;
   justify-items: center;
-  align-items: center;
 }
 
 .contacts {
-  padding: 10px;
   font-size: 21px;
   font-weight: 700;
+  box-sizing: border-box;
+  padding-top: 23px;
 }
 
 .contacts-hashtag {
@@ -984,12 +1016,25 @@ button {
   text-align: center;
 }
 
+.socials {
+  box-sizing: border-box;
+  padding: 36px 0;
+}
+
 .socials-list {
   width: 150px;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+}
+
+.socials-list li {
+  margin-right: 6px;
+}
+
+.socials-list li:nth-child(3n) {
+  margin-right: 0;
 }
 
 .socials-list li:nth-child(n+4) {
