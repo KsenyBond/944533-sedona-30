@@ -3,8 +3,8 @@
   font-weight: 400;
   font-style: normal;
   src: local("PT Sans"),
-    url("../fonts/PTSans.woff2") format("woff2"),
-    url("../fonts/PTSans.woff") format("woff");
+  url("../fonts/PTSans.woff2") format("woff2"),
+  url("../fonts/PTSans.woff") format("woff");
 }
 
 @font-face {
@@ -62,10 +62,15 @@
   text-transform: uppercase;
   color: var(--basic-text-gray);
   background-color: var(--basic-white);
+  -webkit-box-shadow: 0 5px 15px rgba(var(--basic-shadow-rgb), 0.2);
   box-shadow: 0 5px 15px rgba(var(--basic-shadow-rgb), 0.2);
 
+  display: -ms-grid;
+
   display: grid;
+  -ms-grid-rows: min-content 1fr min-content;
   grid-template-rows: min-content 1fr min-content;
+  -ms-flex-line-pack: start;
   align-content: start;
 }
 
@@ -82,6 +87,7 @@
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -155,6 +161,7 @@ button {
 
 .button-blue:active .button-content,
 .button-hazel:active .button-content {
+  -webkit-filter: opacity(0.3);
   filter: opacity(0.3);
 }
 
@@ -166,6 +173,7 @@ button {
 }
 
 .nav-list {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -178,19 +186,23 @@ button {
 
 .nav-item:nth-child(4n + 1) {
   padding-left: 72px;
+  -ms-grid-column-align: start;
   justify-self: start;
 }
 
 .nav-item:nth-child(4n + 2) {
+  -ms-grid-column-align: start;
   justify-self: start;
 }
 
 .nav-item:nth-child(4n + 3) {
+  -ms-grid-column-align: end;
   justify-self: end;
 }
 
 .nav-item:nth-child(4n + 4) {
   padding-right: 72px;
+  -ms-grid-column-align: end;
   justify-self: end;
 }
 
@@ -198,6 +210,8 @@ button {
   position: absolute;
   left: 50%;
   top: 0;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
   transform: translate(-50%);
 }
 
@@ -211,6 +225,7 @@ button {
 
 .nav-link:active {
   color: var(--basic-black);
+  -webkit-filter: opacity(0.3);
   filter: opacity(0.3);
 }
 
@@ -232,6 +247,7 @@ button {
     url("../img/shape.png") no-repeat center bottom,
     var(--basic-blue) url("../img/bg.jpg") no-repeat;
   padding-top: 77.35px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 42.5px;
 }
@@ -267,11 +283,15 @@ button {
 
 .advantages-list {
   width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .advantage-item {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -280,7 +300,9 @@ button {
   width: 400px;
   min-height: 256px;
   padding: 47px 40px 54px 40px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -301,14 +323,23 @@ button {
 
 .real-city {
   width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .devils-bridge {
   width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -320,7 +351,10 @@ button {
   height: 256px;
   background: var(--basic-blue) url("../img/city-view.jpg");
   background-size: contain;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
   order: 1;
 }
 
@@ -332,6 +366,7 @@ button {
   height: 256px;
   background: var(--basic-blue) url("../img/canyon.jpg");
   background-size: contain;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
@@ -349,7 +384,11 @@ button {
 .features-list {
   background-color: var(--basic-white);
   color: var(--basic-text-gray);
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
   order: 2;
+
+  display: -ms-grid;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -380,6 +419,8 @@ button {
   height: 72px;
   left: 50%;
   top: -100px;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
   transform: translate(-50%);
   background-image: url("../img/motel.svg");
 }
@@ -391,6 +432,8 @@ button {
   height: 70px;
   left: 50%;
   top: -99px;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
   transform: translate(-50%);
   background-image: url("../img/food.svg");
 }
@@ -402,6 +445,8 @@ button {
   height: 77px;
   left: 50%;
   top: -105px;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
   transform: translate(-50%);
   background-image: url("../img/gifts.svg");
 }
@@ -429,12 +474,6 @@ button {
   text-align: center;
 }
 
-.booking .button-content {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
 .booking_container {
   min-height: 594px;
   position: relative;
@@ -442,15 +481,22 @@ button {
 
 .booking-form {
   width: 568px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 55px;
   margin: 0 auto;
   background-color: var(--basic-white);
+  -webkit-box-shadow: 0 7px 15px rgba(var(--basic-shadow-rgb), 0.15);
   box-shadow: 0 7px 15px rgba(var(--basic-shadow-rgb), 0.15);
   z-index: 20;
   position: relative;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -462,8 +508,16 @@ button {
   color: var(--basic-black);
   position: relative;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -487,6 +541,7 @@ button {
   text-transform: uppercase;
   background-color: var(--basic-bg-gray);
   border: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -524,18 +579,24 @@ button {
 .button-search-form {
   display: block;
   width: 568px;
-  height: 86px;
+  min-height: 86px;
   margin: 0 auto;
 }
 
 .button-search {
   display: block;
-  width: 568px;
-  height: 58px;
+  width: 100%;
+  min-height: 58px;
+}
+
+.booking .button-content {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .booking-input::-moz-placeholder {
-  color: var(--basic-black);    /* все равно не работает в Firefox */
+  color: var(--basic-black);
 }
 
 .booking-input::-webkit-input-placeholder  {
@@ -579,6 +640,7 @@ button {
   width: 1200px;
   min-height: 217px;
   padding-top: 26.5px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -589,6 +651,8 @@ button {
 }
 
 .filter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -605,6 +669,9 @@ button {
   position: relative;
   display: block;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -665,9 +732,14 @@ button {
   height: 36px;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 4.5px 0 6.5px 0;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
 }
@@ -727,6 +799,7 @@ button {
   border: 7.5px solid var(--basic-white);
   background-color: var(--decor-range);
   border-radius: 50%;
+  -webkit-box-shadow: 0 2px 0 0 var(--decor-range);
   box-shadow: 0 2px 0 0 var(--decor-range);
   cursor: pointer;
 }
@@ -739,6 +812,7 @@ button {
   border: 9px solid var(--basic-white);
   background-color: var(--decor-range);
   border-radius: 50%;
+  -webkit-box-shadow: 0 2px 0 0 var(--decor-range);
   box-shadow: 0 2px 0 0 var(--decor-range);
   cursor: pointer;
 }
@@ -754,25 +828,27 @@ button {
 .button-filter {
   display: block;
   margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 137px;
-  height: 36px;
+  min-height: 36px;
   background: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  box-sizing: border-box;
 }
 
 .button-filter:hover {
-  display: block;
-  margin: 0 auto;
-  width: 137px;
-  height: 36px;
   background: var(--basic-white);
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
-  box-sizing: border-box;
   color: var(--basic-black);
 }
+
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus + label::after {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
 
 /* Sort */
 
@@ -785,7 +861,13 @@ button {
   height: 26px;
   color: var(--basic-black);
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -805,7 +887,11 @@ button {
 }
 
 .sort-option-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -818,11 +904,13 @@ button {
 
 .sort-option a {
   color: var(--basic-black);
+  -webkit-filter: opacity(30%);
   filter: opacity(30%);
 }
 
 .sort-option:hover a {
   color: var(--basic-blue);
+  -webkit-filter: none;
   filter: none;
 }
 
@@ -833,11 +921,13 @@ button {
 
 .sort-option:active a {
   color: var(--basic-black);
+  -webkit-filter: none;
   filter: none;
 }
 
 .sort-option-current a {
   color: var(--basic-blue);
+  -webkit-filter: none;
   filter: none;
 }
 
@@ -867,7 +957,13 @@ button {
   padding: 30px 73px;
   height: 90px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -884,6 +980,7 @@ button {
 .catalog-item-image {
   width: 135px;
   height: 90px;
+  -o-object-fit: contain;
   object-fit: contain;
   background-color: var(--basic-white);
 }
@@ -902,10 +999,13 @@ button {
 
 .catalog-item-title:active {
   color: var(--basic-black);
+  -webkit-filter: opacity(0.3);
   filter: opacity(0.3);
 }
 
 .catalog-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -913,14 +1013,28 @@ button {
   width: 110px;
   margin-right: 6px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .catalog-item-price {
   width: 142px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -933,7 +1047,7 @@ button {
 .button-booking {
   display: block;
   width: 100%;
-  height: 27px;
+  min-height: 27px;
 }
 
 .catalog .button-content {
@@ -973,6 +1087,7 @@ button {
   background-color: var(--minor-bg-gray);
   color: var(--minor-text-gray);
   padding: 3px 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
   margin-top: 63px;
@@ -995,7 +1110,10 @@ button {
 .main-footer .container {
   min-height: 120px;
 
+  display: -ms-grid;
+
   display: grid;
+  -ms-grid-columns: 327px 400px 327px;
   grid-template-columns: 327px 400px 327px;
   justify-items: center;
 }
@@ -1003,6 +1121,7 @@ button {
 .contacts {
   font-size: 21px;
   font-weight: 700;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-top: 23px;
 }
@@ -1017,6 +1136,7 @@ button {
 }
 
 .socials {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 36px 0;
 }
@@ -1024,8 +1144,15 @@ button {
 .socials-list {
   width: 150px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -1045,8 +1172,16 @@ button {
   width: 46px;
   height: 48px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -1057,8 +1192,16 @@ button {
 .copyright {
   width: 197px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
