@@ -59,6 +59,7 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--basic-text-gray);
   background-color: var(--basic-white);
@@ -133,6 +134,7 @@ button {
   text-transform: uppercase;
   border: none;
   color: var(--basic-white);
+  cursor: pointer;
 }
 
 .button-blue {
@@ -207,6 +209,8 @@ button {
 }
 
 .logo {
+  width: 138px;
+  height: 70px;
   position: absolute;
   left: 50%;
   top: 0;
@@ -261,6 +265,7 @@ button {
 .intro-info {
   margin: 0 auto 16.5px;
   min-height: 80px;
+  max-width: 600px;
   vertical-align: top;
   font-size: 21px;
   line-height: 26px;
@@ -273,12 +278,13 @@ button {
 .advantages {
   background-color: var(--basic-white);
   text-align: center;
-  margin-bottom: 58px;
+  margin-bottom: 56px;
 }
 
 .advantages-list-caption {
   line-height: 26px;
-  margin-bottom: 51px;
+  margin: 0 auto 51px auto;
+  max-width: 900px;
 }
 
 .advantages-list {
@@ -308,6 +314,12 @@ button {
 
 .advantage-description {
   margin: 0 auto;
+  max-width: 258px;
+}
+
+.real-city .advantage-description,
+.devils-bridge .advantage-description {
+  max-width: 310px;
 }
 
 .real-city .advantage-item-text,
@@ -374,11 +386,14 @@ button {
   font-size: 21px;
   font-weight: 700;
   color: var(--basic-black);
+  max-width: 150px;
+  min-height: 43px;
   margin: 0 auto 25px auto;
 }
 
 .advantage-number {
-  margin-bottom: 23px;
+  max-width: 150px;
+  margin: 0 auto 23px auto;
 }
 
 .features-list {
@@ -401,6 +416,7 @@ button {
 
 .feature-title {
   position: relative;
+  max-width: 150px;
   margin: 160px auto 25px auto;
   font-size: 21px;
   font-weight: 700;
@@ -463,14 +479,17 @@ button {
   line-height: 24px;
   font-weight: 700;
   color: var(--basic-black);
-  margin-bottom: 4px;
-  text-align: center;
+  max-width: 300px;
+  margin-bottom: 6px;
+  padding-left: 446px;
 }
 
 .booking-info {
-  line-height: 24px;
-  padding: 23px 0;
-  margin-bottom: 24px;
+  line-height: 26px;
+  max-width: 435px;
+  box-sizing: border-box;
+  padding: 24px 0 19px 0;
+  margin: 0 383px 23px 382px;
   text-align: center;
 }
 
@@ -552,28 +571,54 @@ button {
   text-align: center;
 }
 
-.calendar {
-  width: 21px;
-  height: 23px;
+.calendar-button,
+.minus-button,
+.plus-button {
+  display: block;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.calendar-button {
   position: absolute;
   right: 9px;
   top: 7px;
+  width: 21px;
+  height: 23px;
 }
 
-.minus {
-  width: 12px;
-  height: 3px;
+.calendar {
+  width: 21px;
+  height: 23px;
+}
+
+.minus-button {
   position: absolute;
   right: 89px;
   top: 18px;
+  width: 12px;
+  height: 3px;
+}
+
+.minus {
+  display: block;
+  width: 12px;
+  height: 3px;
+}
+
+.plus-button {
+  position: absolute;
+  right: 13px;
+  top: 14px;
+  width: 11px;
+  height: 11px;
 }
 
 .plus {
+  display: block;
   width: 11px;
   height: 11px;
-  position: absolute;
-  right: 14px;
-  top: 14px;
 }
 
 .button-search-form {
@@ -848,13 +893,11 @@ button {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-
-
 /* Sort */
 
 .sort {
   background-color: var(--basic-white);
-  padding: 29px 0 33px 0;
+  padding: 29px 0 31px 0;
 }
 
 .sort .container {
@@ -954,8 +997,8 @@ button {
 
 .catalog-item {
   border-bottom: 1px solid var(--input-focus);
-  padding: 30px 73px;
-  height: 90px;
+  padding: 23.5px 73px 30px 73px;
+  min-height: 90px;
 
   display: -webkit-box;
 
@@ -990,6 +1033,7 @@ button {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  max-width: 258px;
   margin-bottom: 7px;
 }
 
