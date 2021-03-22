@@ -487,6 +487,7 @@ button {
 .booking-info {
   line-height: 26px;
   max-width: 435px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 24px 0 19px 0;
   margin: 0 383px 23px 382px;
@@ -790,28 +791,46 @@ button {
 }
 
 .price-controls-column {
-  width: 158.5px;
   height: 21px;
-  text-align: center;
 }
 
 .price-controls-column:first-child {
+  width: 159px;
   border-right: 1px solid var(--basic-white);
 }
 
 .price-controls-column:last-child {
+  width: 156px;
   border-left: 1px solid var(--basic-white);
 }
 
+.price-min {
+  width: 58px;
+  height: 21px;
+  text-align: center;
+  margin-left: 64px;
+}
+
+.price-max {
+  width: 83px;
+  text-align: center;
+  margin-left: 39px;
+}
+
 .price-controls label {
-  padding-left: 15px;
+  display: inline-block;
+  height: 21px;
+  vertical-align: top;
 }
 
 .price-controls input {
-  width: 33px;
-  padding-right: 15px;
-  background: transparent;
+  display: inline-block;
+  width: 35px;
+  height: 21px;
+  vertical-align: top;
+  padding: 0;
   border: 0;
+  background: transparent;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -838,7 +857,7 @@ button {
 
 .range-controls .toggle {
   position: absolute;
-  top: -8.5px;
+  top: -9.5px;
   width: 4px;
   height: 4px;
   border: 7.5px solid var(--basic-white);
@@ -872,7 +891,7 @@ button {
 
 .button-filter {
   display: block;
-  margin: 0 auto;
+  margin-left: 85px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 137px;
@@ -1241,17 +1260,21 @@ button {
   display: -ms-flexbox;
 
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
+.copyright-dev {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
 .copyright-logo {
   width: 115px;
   height: 41px;
+  margin-top: 38px;
 }
 
 .copyright-logo:hover .button-icon {
